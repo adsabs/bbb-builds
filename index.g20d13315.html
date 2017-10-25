@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NASA/ADS Search (Beta Interface)</title>
+  <meta name="description" content="A powerful, streamlined new way to search the Astrophysics Data System" />
+  <link rel="stylesheet" href="./styles/css/styles.4d231336.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./styles/img/favicon.ico">
+</head>
+
+  <body>
+    <!--items for announcement of new page, and optional skip to main content link go here (inserted by master.js)-->
+
+    <div class="container-fluid" id="app-container">
+     <!--this is where bbb discovery gets inserted -->
+      <div id="body-template-container">
+        <noscript>
+          <p>
+              Welcome hardcode user. Your client does not speak JavaScript,
+          please follow this link to access a non-JavaScript version of this
+              website:
+          <a href="//adsabs.harvard.edu/abstract_service.html">ADS Classic</a></p>
+        </noscript>
+
+        <div class="loading-screen">
+          <div>
+              <div class="logo__astrophysics">astrophysics</div>
+              <div class="logo__data-system">data system</div>
+          </div>
+          <span class="loading-screen__loading">loading...</span>
+        </div>
+      </div>
+    </div>
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"WebSite","name":"ADS","alternateName":"Astrophysics Data System","url":"https://ui.adsabs.harvard.edu"}
+    </script>
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"WebSite","url":"https://ui.absads.harvard.edu/","potentialAction":{"@type":"SearchAction","target":"https://ui.adsabs.harvard.edu/#search/q={search_term_string}","query-input":"required name=search_term_string"}}
+    </script>
+    <script>
+        // define waitSeconds above require script tag
+        // to override the default, until main.js loads
+        //see https://github.com/yeoman/yeoman/issues/1051
+        window.require = {
+            waitSeconds: 30
+        };
+    </script>
+
+    <!-- start the discovery application -->
+    <script data-main="./bumblebee_app.g20d13315.js"  src="./libs/requirejs/require.js"></script>
+  </body>
+</html>
